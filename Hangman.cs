@@ -243,7 +243,7 @@ namespace Hangman_MongoDB
             Console.Clear();
             //show 10 fastest games where player won
             var collection = database.GetCollection<BsonDocument>("results");
-            //filtering the result where player won (mystery word is the same ass player guess)
+            //filtering the result where player won (mystery word is the same as player guess)
             string filter = "{$expr:{$eq:[\"$mystery_word\",\"$player_guess\"]}}";
             //Console.WriteLine(filter);
             var results = collection.Find(filter).Sort("{play_time:1}").Limit(10).ToList();
