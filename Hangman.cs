@@ -22,7 +22,7 @@ namespace Hangman_MongoDB
         public void Setup()
         {
             //connect to database
-            settings = MongoClientSettings.FromConnectionString("*hidden*"); //copied from how to connect in mongodb database
+            settings = MongoClientSettings.FromConnectionString("*deleted*"); //copied from how to connect in mongodb database
             settings.ServerApi = new ServerApi(ServerApiVersion.V1);
             client = new MongoClient(settings);
             try
